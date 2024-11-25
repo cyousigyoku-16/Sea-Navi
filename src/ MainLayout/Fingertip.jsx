@@ -7,20 +7,22 @@ import WindSpeed from './WindSpeedShow.jsx';
 import SpeedProgressBar from './SpeedBarShow.jsx';
 import WaterSpeedChart from './WaterSpeedChart';
 import WaterSpeed from './WaterSpeedShow.jsx';
+import { Box } from '@mui/material';
+import DirectionShow from './CenteVisual.jsx'
 
+import TimeDateShow from './TimeShow.jsx';
 const App = () => {
     return (
-        <div>
-            <h1></h1>
-            <FullCircleGaugeChart />
+        <>
+            <DirectionShow />
             <ShipCrs />
             <ShipDir />
             <WindCrs />
             <WindSpeed />
-            <SpeedProgressBar />
             <WaterSpeedChart />
             <WaterSpeed />
-        </div>
+            <TimeDateShow />
+        </>
     );
 };
 

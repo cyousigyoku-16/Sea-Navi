@@ -11,15 +11,25 @@ import LocationCard from './LocationCardShow.jsx'
 import TimeDateShow from './TimeShow.jsx';
 import SIW from './SpeedInWater.jsx';
 import SOG from './SpeedOverGround.jsx';
+import Box from '@mui/material/Box';
+import { Stack } from '@mui/material';
 const App = () => {
     return (
         <>
-            <DirectionShow />
-            <ShipCrs />
-            <ShipDir />
-            <WindCrs />
-            <WindSpeed />
-            <WaterSpeedChart />
+            <Box  position='static' sx={{border:1, borderColor:'white', width:1000, position: 'fixed', top: '30%', left: '40%',}}>
+                     <Stack direction='row'>
+                        <Stack>
+                           <Box sx={{height:50}}></Box>
+                            <ShipCrs />
+                            <ShipDir />
+                            <WindCrs />
+                            <WindSpeed />
+                        </Stack>
+                       <DirectionShow />
+                       <WaterSpeedChart />
+                    </Stack>
+            </Box>
+            
             <WaterSpeed />
             <TimeDateShow />
             <LocationCard />

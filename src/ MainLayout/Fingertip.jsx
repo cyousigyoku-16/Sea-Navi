@@ -9,8 +9,10 @@ import WaterSpeedChart from './WaterSpeedChart';
 import WaterSpeed from './WaterSpeedShow.jsx';
 import { Box } from '@mui/material';
 import DirectionShow from './CenteVisual.jsx'
-
+import LocationCard from './LocationCardShow.jsx'
 import TimeDateShow from './TimeShow.jsx';
+import SIW from './SpeedInWater.jsx';
+import SOG from './SpeedOverGround.jsx';
 const App = () => {
     return (
         <>
@@ -22,6 +24,9 @@ const App = () => {
             <WaterSpeedChart />
             <WaterSpeed />
             <TimeDateShow />
+            <LocationCard />
+            <SIW />
+            <SOG />
         </>
     );
 };

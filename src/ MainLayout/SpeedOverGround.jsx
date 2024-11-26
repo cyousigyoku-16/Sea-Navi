@@ -1,9 +1,8 @@
-
 import { Stack, Box, Typography } from "@mui/material";
 import React, { useState, useEffect, useRef } from "react";
 
-function UTC() {
-    const [data, setData] = useState({ DayUtc: "0", TimeUtc: "0" }); // 初始值
+function SOG() {
+    const [data, setData] = useState({ Sog: "0" }); // 初始值
     const [jsonBlocks, setJsonBlocks] = useState([]); // 保存 JSON 数据块
     const blockIndexRef = useRef(0); // 当前读取的 JSON 块索引        
 
@@ -29,8 +28,8 @@ function UTC() {
                 try {
                     const currentJson = JSON.parse(jsonBlocks[blockIndexRef.current]); // 解析当前块
                     setData({
-                        DayUtc: currentJson.DayUtc, // 更新 SysCour
-                        TimeUtc: currentJson.TimeUtc,  // 更新 TrueWdir
+                        Sog: currentJson.Sog, // 更新 SysCour
+                        //TrueWdir: currentJson.TrueWdir, // 更新 TrueWdir
                     });
                     blockIndexRef.current = (blockIndexRef.current + 1) % jsonBlocks.length; // 更新索引
                 } catch (error) {
@@ -44,17 +43,17 @@ function UTC() {
 
     return (
         <>
-            <Stack direction="row" sx={{ justifyContent: "flex-start", alignItems: "center" }}>
-
-                <Stack direction="column" sx={{ alignItems: "flex-start" }}>
-                    <Typography color="white" fontSize={20} fontWeight="bold"> {data.DayUtc} </Typography>
-                    <Typography color="white" fontSize={20} fontWeight="bold"> {data.TimeUtc} </Typography>
-                    <Box sx={{ width: 28 }}></Box>
-                    <Typography color="white" fontSize={16}>UTC</Typography>
+            <Stack direction="column" sx={{ alignItems: "flex-start" }}>
+                <Stack direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
+                    <Typography color="white" fontSize={32} fontWeight="bold"> {data.Sog}</Typography>
+                    <Typography color="white" fontSize={20}> kt</Typography>
                 </Stack >
+                <Box sx={{ height: 20 }}></Box>
+                <Typography color="white" fontSize={16}>対地速力</Typography>
+
             </Stack>
         </>
     );
 }
 
-export default UTC;
+export default SOG;

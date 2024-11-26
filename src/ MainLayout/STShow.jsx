@@ -46,7 +46,7 @@ function ST() {
         <>
             <Stack direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
 
-                <Stack direction="column" sx={{ alignItems: "center" }}>
+                <Stack direction="column" sx={{ alignItems: "flex-start" }}>
                     <Typography color="white" fontSize={20} fontWeight="bold"> {data.DayUtc} </Typography>
                     <Typography color="white" fontSize={20} fontWeight="bold"> {data.TimeLocal} </Typography>
                     <Box sx={{ width: 28 }}></Box>

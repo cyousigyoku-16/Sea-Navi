@@ -44,15 +44,16 @@ function UTC() {
 
     return (
         <>
-            <Stack direction="row" sx={{ justifyContent: "flex-start", alignItems: "center" }}>
-
-                <Stack direction="column" sx={{ alignItems: "flex-start" }}>
-                    <Typography color="white" fontSize={20} fontWeight="bold"> {data.DayUtc} </Typography>
-                    <Typography color="white" fontSize={20} fontWeight="bold"> {data.TimeUtc} </Typography>
-                    <Box sx={{ width: 28 }}></Box>
-                    <Typography color="white" fontSize={16}>UTC</Typography>
-                </Stack >
-            </Stack>
+            <Box >
+                <Stack direction="row" >
+                    <Stack direction="column" >
+                        <Typography color="white" fontSize={20} fontWeight="bold"> {data.DayUtc} </Typography>
+                        <Typography color="white" fontSize={20} fontWeight="bold"> {data.TimeUtc} </Typography>
+                        <Box sx={{ width: 20 }}></Box>
+                        <Typography color="white" fontSize={16} sx={{ marginTop: 1 }} >UTC</Typography>
+                    </Stack >
+                </Stack>
+            </Box>
         </>
     );
 }

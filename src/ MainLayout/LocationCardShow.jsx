@@ -51,19 +51,22 @@ function LocationCard() {
       sx={{
         display: "flex",
         flexDirection: "row",
-        width: 400,
-        height: 150,
-        backgroundColor: "#181818", // 背景色
-        borderRadius: 10,
-        padding: 2,
-        boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+        width: 361,
+        height: 100,
+        border: 1,             // 设置边框宽度
+        borderColor: "#4A4A4A", // 设置边框颜色
+        borderRadius: 6,
+        position: "relative",
+        top: 25,
+        left: 15,
+
       }}
     >
       {/* 左侧文本部分 */}
       <Stack
         direction="column"
         justifyContent="center"
-        sx={{ flex: 1, paddingRight: 1 }}
+        sx={{ justifyContent: "flex-start", alignItems: "flex-start", padding: 2, }}
       >
         <Typography color="white" fontSize={16} fontWeight="bold">
           {data.PosOffsetLat}°{data.PosOffsetLatSign}
@@ -74,7 +77,16 @@ function LocationCard() {
         <Typography
           color="#A0A0A0"
           fontSize={12}
-          sx={{ marginTop: 1 }}
+          sx={{
+            marginTop: 1,
+            backgroundColor: "#303134", // 设置背景颜色
+            width: 59,                 // 固定宽度
+            height: 20,                // 固定高度
+            display: "flex",           // 使用 flex 布局
+            alignItems: "center",      // 垂直居中
+            justifyContent: "center",  // 水平居中
+            borderRadius: 2,          // 圆角为 2  
+          }}
         >
           当前位置
         </Typography>
@@ -83,15 +95,23 @@ function LocationCard() {
       {/* 右侧地图部分 */}
       <Box
         sx={{
-          flex: 1,
-          borderRadius: 8,
+          position: "absolute", // 使用绝对定位
+          top: "50%",           // 垂直方向居中
+          right: 6,            // 距离右边框 10px
+          transform: "translateY(-50%)", // 修正垂直方向偏移
+          borderRadius: 5,
           overflow: "hidden", // 确保地图边界圆角
+          width: 170,        // 设置地图容器宽度
+          height: 88,       // 设置地图容器高度
+          marginLeft: "auto", // 让地图靠右
+          justifyContent: "center", alignItems: "center"
+
         }}
       >
         <MapContainer
           center={[35.4682, 139.848]} // 设置地图的中心坐标
           zoom={15}
-          style={{ height: "80%", width: "100%" }}
+          style={{ height: "80%", width: "80%" }}
         >
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

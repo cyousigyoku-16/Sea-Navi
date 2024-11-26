@@ -1,5 +1,5 @@
 import SpeedProgressBar from './SpeedBarShow.jsx';
-import FullCircleGaugeChart from './FullCircleGaugeChart';
+import FullCircleGaugeChart from './FullCircleGaugeChart.js';
 
 import { Box, Typography, Stack } from "@mui/material";
 

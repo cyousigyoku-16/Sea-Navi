@@ -29,7 +29,7 @@ function ST() {
                 try {
                     const currentJson = JSON.parse(jsonBlocks[blockIndexRef.current]); // 解析当前块
                     setData({
-                        DayUtc: currentJson.DayUtc, // 更新 SysCour
+                        DayLocal: currentJson.DayLocal, // 更新 SysCour
                         TimeLocal: currentJson.TimeLocal, // 更新 TrueWdir
                     });
                     blockIndexRef.current = (blockIndexRef.current + 1) % jsonBlocks.length; // 更新索引
@@ -44,15 +44,16 @@ function ST() {
 
     return (
         <>
-            <Stack direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
-
-                <Stack direction="column" sx={{ alignItems: "flex-start" }}>
-                    <Typography color="white" fontSize={20} fontWeight="bold"> {data.DayUtc} </Typography>
-                    <Typography color="white" fontSize={20} fontWeight="bold"> {data.TimeLocal} </Typography>
-                    <Box sx={{ width: 28 }}></Box>
-                    <Typography color="white" fontSize={16}>ST</Typography>
-                </Stack >
-            </Stack>
+            <Box    >
+                <Stack direction="row">
+                    <Stack direction="column" >
+                        <Typography color="white" fontSize={20} fontWeight="bold"> {data.DayLocal} </Typography>
+                        <Typography color="white" fontSize={20} fontWeight="bold"> {data.TimeLocal} </Typography>
+                        <Box sx={{ width: 20 }}></Box>
+                        <Typography color="white" fontSize={16} sx={{ marginTop: 1 }}>ST</Typography>
+                    </Stack >
+                </Stack>
+            </Box>
         </>
     );
 }

@@ -18,8 +18,13 @@ const TimeDateShow = () => {
                 top: 15,
                 left: 15,
             }} >
-                <Box sx={{}}>
-                    <Stack direction='row' spacing={4} sx={{ justifyContent: "center", alignItems: "center" }}>
+                <Box sx={{
+                    width: 361,
+                    height: 110, justifyContent: "center", alignItems: "center", position: "relative",
+                    top: 10,
+
+                }}>
+                    <Stack direction='row' spacing={5} sx={{ justifyContent: "center", alignItems: "center" }}>
                         <UTC />
                         <Stack sx={{ height: 65 }}>
                             <img loading="lazy" src='./Rectangle9.png' height='100%' />

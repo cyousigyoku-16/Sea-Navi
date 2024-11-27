@@ -52,6 +52,8 @@ function ShipDir() {
                     <Typography color="white" fontSize={14}>対地針路</Typography>
                 </Stack >
             </Stack>
+
+
         </>
     );
 }

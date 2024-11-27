@@ -11,6 +11,7 @@ import TimeDateShow from './TimeShow.jsx';
 import SpdDateShow from './SpdShow.jsx';
 import Box from '@mui/material/Box';
 import { Stack } from '@mui/material';
+import DirectionCard from './DirectionCardShow.jsx'
 const App = () => {
     return (
         <>
@@ -33,6 +34,7 @@ const App = () => {
             <TimeDateShow />
             <LocationCard />
             <SpdDateShow />
+            <DirectionCard />
 
         </>
     );

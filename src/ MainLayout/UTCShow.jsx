@@ -45,14 +45,14 @@ function UTC() {
     return (
         <>
             <Box >
-                <Stack direction="row" >
-                    <Stack direction="column" >
-                        <Typography color="white" fontSize={20} fontWeight="bold"> {data.DayUtc} </Typography>
-                        <Typography color="white" fontSize={20} fontWeight="bold"> {data.TimeUtc} </Typography>
-                        <Box sx={{ width: 20 }}></Box>
-                        <Typography color="white" fontSize={16} sx={{ marginTop: 1 }} >UTC</Typography>
-                    </Stack >
-                </Stack>
+
+                <Stack direction="column" >
+                    <Typography color="white" fontSize={18} fontWeight="bold"> {data.DayUtc} </Typography>
+                    <Typography color="white" fontSize={18} fontWeight="bold"> {data.TimeUtc} </Typography>
+                    <Box sx={{ width: 20 }}></Box>
+                    <Typography color="white" fontSize={14} sx={{ marginTop: 2 }} >UTC</Typography>
+                </Stack >
+
             </Box>
         </>
     );

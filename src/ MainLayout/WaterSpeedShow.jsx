@@ -46,8 +46,8 @@ function WaterSpeed() {
             <Stack direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
 
                 <Stack direction="column" sx={{ alignItems: "center" }}>
-                    <Typography color="white" fontSize={30} fontWeight="bold">{data.SysSpd}m/s</Typography>
-                    <div style={{ opacity: 0.5 }}><Typography color="white" fontSize={14}>対水速力/kt</Typography></div>
+                    <Typography color="white" fontSize={16} fontWeight="bold">{data.SysSpd}m/s</Typography>
+                    <div style={{ opacity: 0.5 }}><Typography color="white" fontSize={10}>対水速力/kt</Typography></div>
                 </Stack >
             </Stack>
         </>

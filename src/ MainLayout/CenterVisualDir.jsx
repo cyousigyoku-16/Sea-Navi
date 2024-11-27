@@ -8,7 +8,11 @@ const DirectionShow = () => {
     return (
         <>
             <Box>
-                <Stack direction='column' spacing={1} sx={{ justifyContent: "center", alignItems: "center" }}>
+                <Stack direction='column' sx={{
+                    justifyContent: "flex-start", alignItems: "center", position: "relative",
+                    top: -5,
+                    left: 30,
+                }}>
                     <FullCircleGaugeChart />
                     <SpeedProgressBar />
                 </Stack>

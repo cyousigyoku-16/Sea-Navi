@@ -8,9 +8,14 @@ const WaterSpdShow = () => {
     return (
         <>
             <Box>
-                <Stack direction='column' sx={{ justifyContent: "center", alignItems: "center" }}>
+                <Stack direction='column' sx={{ justifyContent: "flex-start", alignItems: "center", position: "relative", left: 50, }}>
                     < WaterSpeedChart />
-                    <WaterSpeed />
+                    <Stack sx={{
+                        position: "relative", top: -30,
+                    }}>
+                        <WaterSpeed />
+                    </Stack>
+
                 </Stack>
             </Box>
         </>

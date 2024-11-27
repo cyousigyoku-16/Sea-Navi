@@ -41,28 +41,28 @@ function SpeedProgressBar() {
     }, [jsonBlocks]); // 依赖于 jsonBlocks
 
     // 确保 TrueWspd 在 0 到 30 范围内
-    const clampedSpeed = Math.min(Math.max(parseFloat(data.TrueWspd), 0), 30);
+    const clampedSpeed = Math.min(Math.max(parseFloat(data.TrueWspd), 0), 40);
 
     // 根据 speed 设置渐变颜色
     const getGradientBackground = (speed) => {
-        if (speed <= 10) {
-            return "linear-gradient(to right, #F7FFAE, #91FFD7)"; // 0-10 绿蓝渐变
-        } else if (speed <= 20) {
-            return "linear-gradient(to right, #91FFD7, #7288FF)"; // 10-20 蓝紫渐变
+        if (speed <= 15) {
+            return "linear-gradient(to right, #F7FFAE, #91FFD7)"; // 0-15 绿蓝渐变
+        } else if (speed <= 25) {
+            return "linear-gradient(to right, #91FFD7, #7288FF)"; // 15-25 蓝紫渐变
         } else {
-            return "linear-gradient(to right, #7288FF, #FF72A5)"; // 20-30 紫红渐变
+            return "linear-gradient(to right, #7288FF, #FF72A5)"; // 25-40紫红渐变
         }
     };
 
     // 计算进度条宽度
-    const progressWidth = (clampedSpeed / 30) * 240; // 300 是总长度
+    const progressWidth = (clampedSpeed / 40) * 70; // 70 是总长度
 
     return (
-        <Box sx={{ width: 340, display: "flex", alignItems: "center", gap: 1 }}>
+        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
 
-            <Typography sx={{ fontSize: 18, color: "white" }} > 弱 </Typography>
+            <Typography sx={{ fontSize: 10, color: "white" }} > 弱 </Typography>
 
-            <Box sx={{ width: 240, height: 10, backgroundColor: "#393939", borderRadius: 10, overflow: "hidden", position: "relative" }}>
+            <Box sx={{ width: 70, height: 3, backgroundColor: "#393939", borderRadius: 10, overflow: "hidden", position: "relative" }}>
                 <Box
                     sx={{
                         width: `${progressWidth}px`,
@@ -73,7 +73,7 @@ function SpeedProgressBar() {
                 ></Box>
 
             </Box>
-            <Typography sx={{ fontSize: 18, color: "white", }}> 强</Typography>
+            <Typography sx={{ fontSize: 10, color: "white", }}> 强</Typography>
 
         </Box>
     );

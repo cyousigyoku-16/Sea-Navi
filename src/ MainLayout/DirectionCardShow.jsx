@@ -55,7 +55,7 @@ function DirectionCard() {
                 height: 150,
                 borderRadius: 6,
                 position: "relative",
-                top: 55,
+                top: 45,
                 left: 15,
             }}  >
                 <Stack direction="row" spacing={5} sx={{

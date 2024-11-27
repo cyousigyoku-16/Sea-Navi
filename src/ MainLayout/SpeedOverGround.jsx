@@ -43,13 +43,13 @@ function SOG() {
 
     return (
         <>
-            <Box sx={{ width: 172, height: 122, backgroundColor: "#272729", borderRadius: 6 }}>
-                <Stack direction="column" sx={{ alignItems: "flex-start", paddingLeft: 2, paddingTop: 2 }}>
+            <Box sx={{ width: 172, height: 100, backgroundColor: "#272729", borderRadius: 6 }}>
+                <Stack direction="column" sx={{ alignItems: "flex-start", paddingLeft: 2, paddingTop: 1 }}>
                     <Stack direction="row" position='static' sx={{ alignItems: "center", justifyContent: 'space-between', width: '85%' }}>
                         <Typography color="white" fontSize={32} fontWeight="bold"> {data.Sog}</Typography>
                         <Typography color="white" fontSize={20}> kt</Typography>
                     </Stack >
-                    <Typography color="white" fontSize={16} sx={{ marginTop: 2 }}>対地速力</Typography>
+                    <Typography color="white" fontSize={16} sx={{ marginTop: 1 }}>対地速力</Typography>
 
                 </Stack>
             </Box>

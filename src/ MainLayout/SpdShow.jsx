@@ -7,7 +7,7 @@ const SpdDateShow = () => {
         <>
             <Box sx={{
                 width: 361,
-                height: 110,
+                height: 100,
                 borderRadius: 6,
                 position: "relative",
                 top: 35,

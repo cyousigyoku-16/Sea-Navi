@@ -22,11 +22,11 @@ const WaterSpeedChart = () => {
                     type: 'image',
                     id: 'background',
                     left: 'center',
-                    top: 'center',
+
                     style: {
                         image: '/Group159.png',
-                        width: 300,
-                        height: 260,
+                        width: 150,
+                        height: 150,
 
                     }
                 },
@@ -38,21 +38,23 @@ const WaterSpeedChart = () => {
                     detail: { show: false },   // 显示数据                    
                     data: [{ value: data.SysSpd, name: '' }],
                     radius: '100%',
+
                     min: -5,
                     max: 20,
-                    startAngle: -120,
+                    startAngle: -150,
                     endAngle: 0,
                     axisLine: { lineStyle: { width: 0 } },
                     axisLabel: { show: false },
                     axisTick: { show: false },
                     splitLine: { show: false },
-                    pointer: { length: '70%', width: 8 },
+                    pointer: { length: '70%', width: 3 },
                     itemStyle: {
                         color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
                             { offset: 0, color: '#6FFF97' },
                             { offset: 1, color: '#7BE1FE' }
                         ])
                     }
+
                 }
             ]
         };
@@ -115,7 +117,7 @@ const WaterSpeedChart = () => {
     return (
         <div>
             <h2></h2>
-            <div ref={chartRef} style={{ width: '400px', height: '300px' }} />
+            <div ref={chartRef} style={{ width: '150px', height: '150px', }} />
         </div>
     );
 };

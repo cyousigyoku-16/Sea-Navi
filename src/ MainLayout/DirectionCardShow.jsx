@@ -52,7 +52,7 @@ function DirectionCard() {
                 //border: 1,
                 //borderColor: "white",
                 width: 361,
-                height: 150,
+                height: 200,
                 borderRadius: 6,
                 position: "relative",
                 top: 45,
@@ -64,7 +64,7 @@ function DirectionCard() {
                 }}>
                     <Stack direction="column" spacing={5} sx={{
                         justifyContent: "center", alignItems: "flex-start", position: "relative",
-                        top: 25, left: 0,
+                        top: 50, left: 0,
                     }}>
                         <Box component="img" src="./HangXing11.png" />
                         <Box component="img" src="./Group66.png" />
@@ -74,7 +74,7 @@ function DirectionCard() {
                     <Stack>
                         <Stack direction='row' spacing={7} sx={{
                             justifyContent: "center", alignItems: "center", position: "relative",
-                            top: 10,
+                            top: 30,
                         }}>
 
                             <Stack direction="column" >
@@ -89,7 +89,7 @@ function DirectionCard() {
 
                         <Stack direction='row' spacing={7} sx={{
                             justifyContent: "center", alignItems: "center", position: "relative",
-                            top: 30,
+                            top: 50,
                         }}>
                             <Stack direction="column" >
                                 <Typography color="white" fontSize={22} fontWeight="bold"> {data["PosSysTar1-2Azi"]}°</Typography>

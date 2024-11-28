@@ -9,10 +9,15 @@ import Box from '@mui/material/Box';
 import { Stack } from '@mui/material';
 import DirectionCard from './DirectionCardShow.jsx'
 import NumberShow from './CenterVisualNum.jsx';
+import NotionAreaShow from './NotionArea.jsx';
+import CameraFroFeed from './CamFroShow.jsx';
+import CameraBehFeed from './CamBehShow.jsx';
+
+
 const App = () => {
     return (
         <>
-            <Box position='static' sx={{ border: 1, borderColor: 'white', width: 700, height: 190, position: 'fixed', top: '30%', left: '40%', }}>
+            <Box position='static' sx={{ backgroundColor: "#191A1D", width: 700, height: 190, position: 'fixed', top: '30%', left: '40%', zIndex: '1800' }}>
                 <Stack direction='row'>
                     <NumberShow />
                     <DirectionShow />
@@ -21,12 +26,28 @@ const App = () => {
                 </Stack>
             </Box>
 
+            <Box>
+                <Stack direction='row'>
 
-            <TimeDateShow />
-            <LocationCard />
-            <SpdDateShow />
-            <DirectionCard />
+                    <Stack direction='column'>
+                        <TimeDateShow />
+                        <LocationCard />
+                        <SpdDateShow />
+                        <DirectionCard />
+                    </Stack>
 
+                    <Stack direction='column' sx={{ position: "relative", top: 15, left: 30, }} >
+                        <NotionAreaShow />
+                        <CameraFroFeed />
+                        <CameraBehFeed />
+
+
+
+                    </Stack>
+
+                </Stack>
+
+            </Box>
         </>
     );
 };

@@ -3,7 +3,7 @@ import { Stack, Box, Typography } from "@mui/material";
 import React, { useState, useEffect, useRef } from "react";
 
 function DirectionCard() {
-    const [data, setData] = useState({ SysCour: "0", BearGyro: "0", "PosSysTar1-2Azi": "0", ShipPosLat: "0" }); // 初始值
+    const [data, setData] = useState({ SysCour: "0", BearGyro: "0", "PosSysTar1-2Azi": "0", AllRhu: "0" }); // 初始值
     const [jsonBlocks, setJsonBlocks] = useState([]); // 保存 JSON 数据块
     const blockIndexRef = useRef(0); // 当前读取的 JSON 块索引        
 
@@ -32,7 +32,7 @@ function DirectionCard() {
                         SysCour: currentJson.SysCour, // 更新 SysCour
                         BearGyro: currentJson.BearGyro,  // 更新 TrueWdir
                         "PosSysTar1-2Azi": currentJson["PosSysTar1-2Azi"],  // 更新 SysCour
-                        ShipPosLat: currentJson.ShipPosLat,  // 更新 TrueWdir
+                        AllRhu: currentJson.AllRhu,  // 更新 TrueWdir
 
                     });
                     blockIndexRef.current = (blockIndexRef.current + 1) % jsonBlocks.length; // 更新索引
@@ -98,7 +98,7 @@ function DirectionCard() {
                             <Stack direction="column" sx={{
                                 justifyContent: "center", alignItems: "center", position: "relative",
                             }}>
-                                <Typography color="white" fontSize={22} fontWeight="bold"> 35.25nm</Typography>
+                                <Typography color="white" fontSize={22} fontWeight="bold"> {data.AllRhu}</Typography>
                                 <Typography color="white" fontSize={14} > 航走距離 </Typography>
                             </Stack >
                         </Stack>

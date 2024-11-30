@@ -12,6 +12,9 @@ import NumberShow from './CenterVisualNum.jsx';
 import NotionAreaShow from './NotionArea.jsx';
 import CameraFroFeed from './CamFroShow.jsx';
 import CameraBehFeed from './CamBehShow.jsx';
+import BehWid from './BehWidShow.jsx';
+import BehMove from './BehMoveShow.jsx';
+import BehElec from './BehElecShow.jsx';
 
 
 const App = () => {
@@ -45,8 +48,14 @@ const App = () => {
 
                     </Stack>
 
+
                 </Stack>
 
+                <Stack>
+                    <BehElec />
+
+
+                </Stack>
             </Box>
         </>
     );

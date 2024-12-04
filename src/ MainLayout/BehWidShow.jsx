@@ -53,8 +53,8 @@ function BehWid() {
             <Stack direction="row" sx={{
                 width: 1120, height: 244, backgroundColor: "#272729", borderRadius: 4,
                 position: "relative",
-                left: 200,
-                top: 30
+                left: -14,
+                top: 24
             }}>
                 <Stack direction="column" >
                     <Stack direction="row" sx={{

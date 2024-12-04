@@ -2,7 +2,7 @@ import { Stack, Box, Typography } from "@mui/material";
 import React, { useState, useEffect, useRef } from "react";
 
 function BehMove() {
-    const [data, setData] = useState({ ADraft: "0", FDraft: "0", Trim: "0", RollingAng: "0", PitchingAng: "0", }); // 初始值
+    const [data, setData] = useState({ ADraft: "0", FDraft: "0", Trim: "0", RollingAng: "0", PitchingAng: "0", No1Rud: "0", No2Rud: "0", Hum: "0", Dep: "0" }); // 初始值
     const [jsonBlocks, setJsonBlocks] = useState([]); // 保存 JSON 数据块
     const blockIndexRef = useRef(0); // 当前读取的 JSON 块索引        
 
@@ -50,8 +50,8 @@ function BehMove() {
             <Stack direction="row" sx={{
                 width: 1120, height: 244, backgroundColor: "#272729", borderRadius: 4,
                 position: "relative",
-                left: 200,
-                top: 30
+                left: -14,
+                top: 24
             }}>
 
                 <Stack direction="row" sx={{ position: "relative", left: 50, alignItems: "center", }} >

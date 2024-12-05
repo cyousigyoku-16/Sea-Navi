@@ -1,26 +1,15 @@
 {
-  "name": "react-basic",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.13.5",
-    "@emotion/styled": "^11.13.5",
-    "@mui/material": "^6.1.8",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "d3": "^7.9.0",
-    "echarts": "^5.5.1",
-    "express": "^4.21.1",
-    "leaflet": "^1.9.4",
     "react": "^18.3.1",
-    "react-d3-speedometer": "^2.2.1",
     "react-dom": "^18.3.1",
-    "react-leaflet": "^4.2.1",
-    "react-scripts": "^5.0.1",
-    "react-speedometer": "^0.1.2",
-    "web-vitals": "^2.1.4",
-    "webpack": "^5.95.0"
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -45,10 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }

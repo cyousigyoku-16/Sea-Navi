@@ -46,12 +46,14 @@ function ShipDir() {
         <>
             <Stack direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
                 <Box component="img" src="./Line1.png" />
-                <Box sx={{ width: 30 }}></Box>
+                <Box sx={{ width: 20 }}></Box>
                 <Stack direction="column" sx={{ alignItems: "center" }}>
-                    <Typography color="white" fontSize={30} fontWeight="bold"> {data.BearGyro}° </Typography>
-                    <Typography color="white" fontSize={14}>対地針路</Typography>
+                    <Typography color="white" fontSize={16} fontWeight="bold"> {data.BearGyro}° </Typography>
+                    <Typography color="white" fontSize={10}>対地針路</Typography>
                 </Stack >
             </Stack>
+
+
         </>
     );
 }

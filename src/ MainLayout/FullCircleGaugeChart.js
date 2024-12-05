@@ -25,8 +25,8 @@ const FullCircleGaugeChart = () => {
           top: 'center',
           style: {
             image: '/Group155.png',
-            width: 300,
-            height: 300,
+            width: 150,
+            height: 150,
           }
         },
       ],
@@ -45,11 +45,11 @@ const FullCircleGaugeChart = () => {
           axisLabel: { show: false },
           axisTick: { show: false },
           splitLine: { show: false },
-          pointer: { length: '70%', width: 8 },
+          pointer: { length: '70%', width: 3 },
           itemStyle: {
             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-              { offset: 0, color: '#6FFF97' },
-              { offset: 1, color: '#7BE1FE' }
+              { offset: 0, color: '#56E8FF' },
+              { offset: 1, color: '#6F72FF' }
             ])
           }
         },
@@ -72,7 +72,7 @@ const FullCircleGaugeChart = () => {
             show: true,
             icon: `image://${pointerImage}`,
             length: '100%',
-            width: 30,
+            width: 15,
           },
         },
         {
@@ -89,11 +89,11 @@ const FullCircleGaugeChart = () => {
           axisLabel: { show: false },
           axisTick: { show: false },
           splitLine: { show: false },
-          pointer: { length: '70%', width: 8 },
+          pointer: { length: '50%', width: 3 },
           itemStyle: {
             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-              { offset: 0, color: '#56E8FF' },
-              { offset: 1, color: '#6F72FF' }
+              { offset: 1, color: '#FFE942' },
+              { offset: 0, color: '#FF9365' }
             ])
           }
         },
@@ -162,7 +162,7 @@ const FullCircleGaugeChart = () => {
   return (
     <div>
       <h2></h2>
-      <div ref={chartRef} style={{ width: '400px', height: '300px' }} />
+      <div ref={chartRef} style={{ width: '150px', height: '150px' }} />
     </div>
   );
 };

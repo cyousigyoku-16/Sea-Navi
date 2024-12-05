@@ -1,8 +1,9 @@
+
 import { Stack, Box, Typography } from "@mui/material";
 import React, { useState, useEffect, useRef } from "react";
 
-function ShipCrs() {
-    const [data, setData] = useState({ SysCour: "0" }); // 初始值
+function UTC() {
+    const [data, setData] = useState({ DayUtc: "0", TimeUtc: "0" }); // 初始值
     const [jsonBlocks, setJsonBlocks] = useState([]); // 保存 JSON 数据块
     const blockIndexRef = useRef(0); // 当前读取的 JSON 块索引        
 
@@ -28,8 +29,8 @@ function ShipCrs() {
                 try {
                     const currentJson = JSON.parse(jsonBlocks[blockIndexRef.current]); // 解析当前块
                     setData({
-                        SysCour: currentJson.SysCour, // 更新 SysCour
-                        //TrueWdir: currentJson.TrueWdir, // 更新 TrueWdir
+                        DayUtc: currentJson.DayUtc, // 更新 SysCour
+                        TimeUtc: currentJson.TimeUtc,  // 更新 TrueWdir
                     });
                     blockIndexRef.current = (blockIndexRef.current + 1) % jsonBlocks.length; // 更新索引
                 } catch (error) {
@@ -43,16 +44,18 @@ function ShipCrs() {
 
     return (
         <>
-            <Stack direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
-                <Box component="img" src="./Line1.png" />
-                <Box sx={{ width: 20 }}></Box>
-                <Stack direction="column" sx={{ alignItems: "center" }}>
-                    <Typography color="white" fontSize={16} fontWeight="bold"> {data.SysCour}° </Typography>
-                    <Typography color="white" fontSize={10}>船首方向</Typography>
+            <Box >
+
+                <Stack direction="column" >
+                    <Typography color="white" fontSize={18} fontWeight="bold"> {data.DayUtc} </Typography>
+                    <Typography color="white" fontSize={18} fontWeight="bold"> {data.TimeUtc} </Typography>
+                    <Box sx={{ width: 20 }}></Box>
+                    <Typography color="white" fontSize={14} sx={{ marginTop: 2 }} >UTC</Typography>
                 </Stack >
-            </Stack>
+
+            </Box>
         </>
     );
 }
 
-export default ShipCrs;
+export default UTC;

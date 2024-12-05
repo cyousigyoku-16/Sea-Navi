@@ -45,10 +45,10 @@ function WindSpeed() {
         <>
             <Stack direction="row" sx={{ justifyContent: "center", alignItems: "center" }}>
                 <Box component="img" src="./Vector12.png" />
-                <Box sx={{ width: 30 }}></Box>
+                <Box sx={{ width: 20 }}></Box>
                 <Stack direction="column" sx={{ alignItems: "center" }}>
-                    <Typography color="white" fontSize={30} fontWeight="bold">{data.TrueWspd}m/s</Typography>
-                    <Typography color="white" fontSize={14}>真風速</Typography>
+                    <Typography color="white" fontSize={16} fontWeight="bold">{data.TrueWspd}m/s</Typography>
+                    <Typography color="white" fontSize={10}>真風速</Typography>
                 </Stack >
             </Stack>
         </>
